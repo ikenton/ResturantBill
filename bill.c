@@ -53,10 +53,10 @@ void main(int argc, char *argv[]){
     total = mealcost + taxed + tipped;
 
     printf("\t TOTAL BILL\n");
-    printf("Meal cost: $%2f\n", mealcost);
-    printf("Tip: $%2f\n", tipped);
-    printf("Tax: $%2f\n", taxed);
+    printf("Meal cost: $%.2f\n", mealcost);
+    printf("Tip: $%.2f\n", tipped);
+    printf("Tax: $%.2f\n", taxed);
     printf("************************\n");
-    printf("TOTAL COST: $%2f\n", total);
+    printf("TOTAL COST: $%.2f\n", total);
     
 }
