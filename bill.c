@@ -24,10 +24,11 @@ total = mealcost + tax + tip
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
 void main(double tax, double tip){
     double mealcost;
     double total;
-
+    
 
     //random number 0-3
     int num;
@@ -43,4 +44,18 @@ void main(double tax, double tip){
     }else if(num == 3){
         mealcost = 22.35;
     }
+
+    tip /= 100;
+    tip *= mealcost;
+    tax /= 100;
+    tax *= mealcost;
+    total = mealcost + tax + tip;
+
+    printf("\t TOTAL BILL\n");
+    printf("Meal cost: %2f\n", mealcost);
+    printf("Tip: %2f\n", tip);
+    printf("Tax: %2f\n", tax);
+    printf("******************\n");
+    printf("TOTAL COST: %2f\n", total);
+    
 }
