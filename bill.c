@@ -25,10 +25,11 @@ total = mealcost + tax + tip
 #include <stdlib.h>
 #include <time.h>
 
-void main(double tax, double tip){
+void main(int argc, char *argv[]){
     double mealcost;
     double total;
-    
+    double taxed = atoi(argv[1]);
+    double tipped= atoi(argv[2]);
 
     //random number 0-3
     int num;
@@ -45,17 +46,17 @@ void main(double tax, double tip){
         mealcost = 22.35;
     }
 
-    tip /= 100;
-    tip *= mealcost;
-    tax /= 100;
-    tax *= mealcost;
-    total = mealcost + tax + tip;
+    tipped /= 100;
+    tipped *= mealcost;
+    taxed /= 100;
+    taxed *= mealcost;
+    total = mealcost + taxed + tipped;
 
     printf("\t TOTAL BILL\n");
-    printf("Meal cost: %2f\n", mealcost);
-    printf("Tip: %2f\n", tip);
-    printf("Tax: %2f\n", tax);
-    printf("******************\n");
-    printf("TOTAL COST: %2f\n", total);
+    printf("Meal cost: $%2f\n", mealcost);
+    printf("Tip: $%2f\n", tipped);
+    printf("Tax: $%2f\n", taxed);
+    printf("************************\n");
+    printf("TOTAL COST: $%2f\n", total);
     
 }
