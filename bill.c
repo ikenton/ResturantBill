@@ -22,11 +22,25 @@ total = mealcost + tax + tip
 */
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+void main(double tax, double tip){
+    double mealcost;
+    double total;
 
-void main(int tax, int tip){
-    double salad = 9.95;
-    double soup = 4.55;
-    double sandwich =12.25;
-    double pizza = 22.35;
-    
+
+    //random number 0-3
+    int num;
+    srand(time(0));
+    num = rand() % 3;
+
+    if(num == 0){
+        mealcost = 9.95;
+    } else if(num == 1){
+        mealcost = 4.55;
+    }else if(num == 2){
+        mealcost = 12.25;
+    }else if(num == 3){
+        mealcost = 22.35;
+    }
 }
